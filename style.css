@@ -1,85 +1,177 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
-  margin: 0;
-  padding: 0;
-}
+/* ===============================
+   TESTBOOK-STYLE MOCK LAYOUT
+================================ */
 
-.container {
-  max-width: 400px;
-  margin: 100px auto;
-  background: white;
-  padding: 30px;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.mock-header {
-  background: #1e293b;
-  color: #fff;
-  padding: 15px 20px;
+/* Top Bar */
+.top-bar {
+  background: #0f4c75;
+  color: #ffffff;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
 }
 
-.mock-container {
-  max-width: 800px;
-  margin: 20px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 6px;
+.top-bar .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.question-number {
+.ghost-btn {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+/* Main Layout */
+.exam-layout {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+/* Question Panel */
+.question-panel {
+  flex: 3;
+  background: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sections {
+  margin-bottom: 15px;
+}
+
+.sections button {
+  padding: 6px 14px;
+  margin-right: 6px;
+  border: 1px solid #ccc;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.sections .active {
+  background: #0f4c75;
+  color: #ffffff;
+  border-color: #0f4c75;
+}
+
+.question-box {
+  margin-top: 15px;
+}
+
+.q-meta {
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.question-text {
+.q-text {
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-#optionsForm label {
+/* Options */
+.options label {
   display: block;
   margin-bottom: 12px;
-  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.navigation {
-  margin-top: 20px;
-  text-align: right;
+.options input {
+  margin-right: 8px;
 }
 
-.mock-footer {
-  text-align: center;
+/* Right Panel */
+.side-panel {
+  flex: 1;
+  background: #eef2f7;
   padding: 15px;
-  font-size: 14px;
-  color: #666;
+  border-left: 1px solid #ccc;
 }
 
-
-h1 {
-  margin-bottom: 5px;
-}
-
-.tagline {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
+.user {
+  font-weight: bold;
   margin-bottom: 15px;
-  font-size: 16px;
 }
 
-button {
+.legend {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.legend div {
+  margin-bottom: 6px;
+}
+
+.legend .box {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.answered {
+  background: #22c55e;
+}
+
+.not-answered {
+  background: #ef4444;
+}
+
+.not-visited {
+  background: #9ca3af;
+}
+
+/* Question Palette */
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.palette button {
+  width: 36px;
+  height: 36px;
+  margin: 4px;
+  border: 1px solid #999;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
   cursor: pointer;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  background: #ffffff;
+  border-top: 1px solid #ccc;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.bottom-bar button {
+  width: auto;
+  padding: 8px 14px;
+}
+
+.bottom-bar .primary {
+  background: #0f4c75;
+  color: #ffffff;
+  border: none;
 }
