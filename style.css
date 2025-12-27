@@ -14,6 +14,53 @@ body {
   border-radius: 8px;
 }
 
+.mock-header {
+  background: #1e293b;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mock-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.question-number {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#optionsForm label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navigation {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.mock-footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+
 h1 {
   margin-bottom: 5px;
 }
