@@ -1,13 +1,26 @@
-document.getElementById("startBtn").addEventListener("click", function () {
-  const exam = document.getElementById("examInput").value;
+/* =========================
+   HOMEPAGE LOGIC
+========================= */
 
-  if (!exam) {
-    alert("Please enter an exam name");
-    return;
+document.addEventListener("DOMContentLoaded", function () {
+  const startBtn = document.getElementById("startBtn");
+
+  if (startBtn) {
+    startBtn.addEventListener("click", startMock);
   }
 
-  function startMock() {
-  const exam = document.getElementById("examInput").value.trim();
+  loadExamTitle();
+});
+
+/* =========================
+   START MOCK FUNCTION
+========================= */
+
+function startMock() {
+  const examInput = document.getElementById("examInput");
+  if (!examInput) return;
+
+  const exam = examInput.value.trim();
 
   if (!exam) {
     alert("Please enter an exam name");
@@ -17,20 +30,18 @@ document.getElementById("startBtn").addEventListener("click", function () {
   window.location.href = `mock.html?exam=${encodeURIComponent(exam)}`;
 }
 
+/* =========================
+   LOAD EXAM TITLE ON MOCK PAGE
+========================= */
 
-  console.log("Starting mock for:", exam);
+function loadExamTitle() {
+  const examTitle = document.getElementById("examTitle");
+  if (!examTitle) return;
 
-  document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const exam = params.get("exam");
 
-  if (exam && document.getElementById("examTitle")) {
-    document.getElementById("examTitle").innerText = `${exam} - Mock Test`;
+  if (exam) {
+    examTitle.innerText = `${exam} - Mock Test`;
   }
-});
-
-
-  // Later:
-  // 1. Call backend API
-  // 2. Load mock test page
-});
+}
